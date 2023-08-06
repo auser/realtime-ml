@@ -4,13 +4,13 @@ from pdb import set_trace as stop
 
 import pandas as pd
 
-from src import config
-from src.data import (
+from taxi_demand_predictor import config
+from taxi_demand_predictor.data import (
     fetch_ride_events_from_data_warehouse,
     transform_raw_data_into_ts_data,
 )
-from src.feature_store_api import get_feature_group
-from src.logger import get_logger
+from taxi_demand_predictor.feature_store_api import get_feature_group
+from taxi_demand_predictor.logger import get_logger
 
 logger = get_logger()
 
