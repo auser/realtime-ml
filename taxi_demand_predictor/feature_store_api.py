@@ -4,21 +4,27 @@ import hopsworks
 
 import taxi_demand_predictor.config as config
 
+def get_project() -> hopsworks.project.Project:
+    """
+    Returns a pointer to the Hopsworks project
+    """
+    return hopsworks.login(
+        project=config.HOPSWORKS_PROJECT_NAME,
+        api_key_value=config.HOPSWORKS_API_KEY
+    )
+
 def get_feature_store() -> hsfs.feature_store.FeatureStore:
     """Connects to Hopsworks and returns a pointer to the feature store
 
     Returns:
         hsfs.feature_store.FeatureStore: pointer to the feature store
     """
-    project = hopsworks.login(
-        project=config.HOPSWORKS_PROJECT_NAME,
-        api_key_value=config.HOPSWORKS_API_KEY
-    )
+    project = get_project()
     return project.get_feature_store()
 
 def get_feature_group(
-    name: str,
-    version: Optional[int] = 1
+    name: str = config.FEATURE_GROUP_NAME,
+    version: Optional[int] = config.FEATURE_GROUP_VERSION
     ) -> hsfs.feature_group.FeatureGroup:
     """Connects to the feature store and returns a pointer to the given
     feature group `name`
