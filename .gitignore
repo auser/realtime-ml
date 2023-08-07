@@ -3,3 +3,7 @@ __pycache__
 .ipynb_checkpoints
 .venv/
 .env
+notebooks/ca_chain
+notebooks/certfile
+notebooks/keyfile
+models

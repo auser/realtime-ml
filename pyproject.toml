@@ -27,6 +27,7 @@ discordwebhook = "^1.0.3"
 fire = "^0.5.0"
 confluent-kafka = ">=1.9.0,<1.10.0"
 hsfs = {version = ">=3.2,<4.0", extras = ["hive"]}
+pytz = "^2023.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
