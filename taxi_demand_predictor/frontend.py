@@ -22,6 +22,11 @@ st.set_page_config(layout="wide")
 current_date = pd.to_datetime(datetime.utcnow()).floor('H')
 st.title(f'Taxi demand prediction 🚕')
 st.header(f'{current_date} UTC')
+st.markdown('''
+This is a demo of a taxi demand prediction system. The system is trained on
+the NYC taxi dataset (available [here](https://d37ci6vzurychx.cloudfront.net/trip-data)), 
+            and predicts the number of taxi rides for the next hour.
+            ''')
 
 progress_bar = st.sidebar.header('Working progress...')
 progress_bar = st.sidebar.progress(0)
