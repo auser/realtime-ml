@@ -49,5 +49,6 @@ jobs:
       # - name: Run training script
       #   env:
       #     HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
+      #     HOPSWORKS_PROJECT_NAME: ${{ secrets.HOPSWORKS_PROJECT_NAME }}
       #     DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
       #   run: make training
