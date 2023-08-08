@@ -17,7 +17,7 @@ from taxi_demand_predictor.inference import (
 from taxi_demand_predictor.paths import DATA_DIR
 from taxi_demand_predictor.plot import plot_one_sample
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title='Taxi demand prediction')
 
 current_date = pd.to_datetime(datetime.utcnow()).floor('H')
 st.title(f'Taxi demand prediction 🚕')
