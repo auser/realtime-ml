@@ -23,9 +23,14 @@ current_date = pd.to_datetime(datetime.utcnow()).floor('H')
 st.title(f'Taxi demand prediction 🚕')
 st.header(f'{current_date} UTC')
 st.markdown('''
+            **TL;DR;**; Looking at the last 28 days of taxi rides in NYC metropolitan area area, predict what the demand will be today for taxi rides, 
+            given the rides on the same day at the same time for today.
+
+
 This is a demo of a taxi demand prediction system. The system is trained on
 the NYC taxi dataset (available [here](https://d37ci6vzurychx.cloudfront.net/trip-data)), 
             and predicts the number of taxi rides for the next hour.
+
             ''')
 
 progress_bar = st.sidebar.header('Working progress...')
