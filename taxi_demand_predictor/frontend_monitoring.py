@@ -13,6 +13,10 @@ st.set_page_config(layout="wide")
 current_date = pd.to_datetime(datetime.utcnow()).floor('H')
 st.title(f'Monitoring dashboard 📈')
 
+st.markdown('''
+Using the model developed for our taxi demand prediction system, we can plot and analyze our model's performance over time.
+            ''')
+
 progress_bar = st.sidebar.header('Working progress')
 progress_bar = st.sidebar.progress(0)
 N_STEPS = 3
