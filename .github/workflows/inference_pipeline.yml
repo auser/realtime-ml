@@ -1,10 +1,10 @@
 name: inference-pipeline
 
 on:
-  workflow_run:
-    workflows: ["feature-pipeline"]
-    types:
-      - completed
+#   workflow_run:
+#     workflows: ["feature-pipeline"]
+#     types:
+#       - completed
 
   workflow_dispatch:
 
